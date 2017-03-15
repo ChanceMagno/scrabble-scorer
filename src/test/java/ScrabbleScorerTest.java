@@ -27,4 +27,13 @@ public class ScrabbleScorerTest {
     assertEquals(expected, testScrabble.calculateSingleLetterScore("g"));
   }
 
+  @Test
+  public void calculateScore_returnsScoreForSingleLetter_3() {
+    ScrabbleScorer testScrabble = new ScrabbleScorer();
+    Integer expected = 3;
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("b"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("c"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("m"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("p"));  }
+
 }
