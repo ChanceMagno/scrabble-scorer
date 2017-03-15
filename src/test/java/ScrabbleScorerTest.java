@@ -34,6 +34,17 @@ public class ScrabbleScorerTest {
     assertEquals(expected, testScrabble.calculateSingleLetterScore("b"));
     assertEquals(expected, testScrabble.calculateSingleLetterScore("c"));
     assertEquals(expected, testScrabble.calculateSingleLetterScore("m"));
-    assertEquals(expected, testScrabble.calculateSingleLetterScore("p"));  }
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("p"));
+  }
 
+  @Test
+  public void calculateScore_returnsScoreForSingleLetter_4() {
+    ScrabbleScorer testScrabble = new ScrabbleScorer();
+    Integer expected = 4;
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("f"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("h"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("v"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("w"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("y"));
+  }
 }
