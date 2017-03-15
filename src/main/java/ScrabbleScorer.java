@@ -8,6 +8,7 @@ public class ScrabbleScorer {
     String[] threePointArray = {"b", "c", "m", "p"};
     String[] fourPointArray = {"f", "h", "v", "w", "y"};
     String[] eightPointArray = {"j", "x"};
+    String[] tenPointArray = {"q", "z"};
     if (Arrays.asList(onePointArray).contains(letterToScore)) {
       score = 1;
     } else if (Arrays.asList(twoPointArray).contains(letterToScore)) {
@@ -20,6 +21,8 @@ public class ScrabbleScorer {
       score = 5;
     } else if (Arrays.asList(eightPointArray).contains(letterToScore)) {
       score = 8;
+    } else if (Arrays.asList(tenPointArray).contains(letterToScore)) {
+      score = 10;
     }
     return score;
   }
