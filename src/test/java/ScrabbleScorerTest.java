@@ -49,9 +49,9 @@ public class ScrabbleScorerTest {
   }
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_4() {
+  public void calculateScore_returnsScoreForSingleLetter_5() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
-    Integer expected = 4;
+    Integer expected = 5;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("k"));
   }
 }

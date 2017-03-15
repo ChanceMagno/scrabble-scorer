@@ -15,6 +15,8 @@ public class ScrabbleScorer {
       score = 3;
     } else if (Arrays.asList(fourPointArray).contains(letterToScore)) {
       score = 4;
+    } else if (letterToScore.equals("k")) {
+      score = 5;
     }
     return score;
   }
