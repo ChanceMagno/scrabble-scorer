@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 public class ScrabbleScorerTest {
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_1() {
+  public void calculateSingleLetterScore_returnsScoreForSingleLetter_1() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
     Integer expected = 1;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("a"));
@@ -20,7 +20,7 @@ public class ScrabbleScorerTest {
   }
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_2() {
+  public void calculateSingleLetterScore_returnsScoreForSingleLetter_2() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
     Integer expected = 2;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("d"));
@@ -28,7 +28,7 @@ public class ScrabbleScorerTest {
   }
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_3() {
+  public void calculateSingleLetterScore_returnsScoreForSingleLetter_3() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
     Integer expected = 3;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("b"));
@@ -38,7 +38,7 @@ public class ScrabbleScorerTest {
   }
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_4() {
+  public void calculateSingleLetterScore_returnsScoreForSingleLetter_4() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
     Integer expected = 4;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("f"));
@@ -49,14 +49,14 @@ public class ScrabbleScorerTest {
   }
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_5() {
+  public void calculateSingleLetterScore_returnsScoreForSingleLetter_5() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
     Integer expected = 5;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("k"));
   }
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_8() {
+  public void calculateSingleLetterScore_returnsScoreForSingleLetter_8() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
     Integer expected = 8;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("j"));
@@ -64,10 +64,18 @@ public class ScrabbleScorerTest {
   }
 
   @Test
-  public void calculateScore_returnsScoreForSingleLetter_10() {
+  public void calculateSingleLetterScore_returnsScoreForSingleLetter_10() {
     ScrabbleScorer testScrabble = new ScrabbleScorer();
     Integer expected = 10;
     assertEquals(expected, testScrabble.calculateSingleLetterScore("q"));
     assertEquals(expected, testScrabble.calculateSingleLetterScore("z"));
   }
+
+  @Test
+  public void calculateWordScore_returnsScoreForCat_5() {
+    ScrabbleScorer testScrabble = new ScrabbleScorer();
+    Integer expected = 5;
+    assertEquals(expected, testScrabble.calculateWordScore("cat"));
+  }
+
 }

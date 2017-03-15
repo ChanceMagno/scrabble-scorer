@@ -1,8 +1,18 @@
 import java.util.Arrays;
 
 public class ScrabbleScorer {
+
+  public Integer calculateWordScore(String wordToScore) {
+    String[] lettersToScore = wordToScore.toLowerCase().split("");
+    Integer wordScore = 0;
+    for (String letterToScore : lettersToScore) {
+      wordScore += calculateSingleLetterScore(letterToScore);
+    }
+    return wordScore;
+  }
+
   public Integer calculateSingleLetterScore(String letterToScore) {
-    Integer score = 0;
+    Integer singleLetterScore = 0;
     String[] onePointArray = {"a", "e", "i", "o", "u", "l", "n", "r", "s", "t"};
     String[] twoPointArray = {"d", "g"};
     String[] threePointArray = {"b", "c", "m", "p"};
@@ -10,21 +20,21 @@ public class ScrabbleScorer {
     String[] eightPointArray = {"j", "x"};
     String[] tenPointArray = {"q", "z"};
     if (Arrays.asList(onePointArray).contains(letterToScore)) {
-      score = 1;
+      singleLetterScore = 1;
     } else if (Arrays.asList(twoPointArray).contains(letterToScore)) {
-      score = 2;
+      singleLetterScore = 2;
     } else if (Arrays.asList(threePointArray).contains(letterToScore)) {
-      score = 3;
+      singleLetterScore = 3;
     } else if (Arrays.asList(fourPointArray).contains(letterToScore)) {
-      score = 4;
+      singleLetterScore = 4;
     } else if (letterToScore.equals("k")) {
-      score = 5;
+      singleLetterScore = 5;
     } else if (Arrays.asList(eightPointArray).contains(letterToScore)) {
-      score = 8;
+      singleLetterScore = 8;
     } else if (Arrays.asList(tenPointArray).contains(letterToScore)) {
-      score = 10;
+      singleLetterScore = 10;
     }
-    return score;
+    return singleLetterScore;
   }
 
 
