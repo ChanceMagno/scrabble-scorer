@@ -62,4 +62,12 @@ public class ScrabbleScorerTest {
     assertEquals(expected, testScrabble.calculateSingleLetterScore("j"));
     assertEquals(expected, testScrabble.calculateSingleLetterScore("x"));
   }
+
+  @Test
+  public void calculateScore_returnsScoreForSingleLetter_10() {
+    ScrabbleScorer testScrabble = new ScrabbleScorer();
+    Integer expected = 10;
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("q"));
+    assertEquals(expected, testScrabble.calculateSingleLetterScore("z"));
+  }
 }
